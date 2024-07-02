@@ -4,9 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pintree</title>
-  <meta name="keywords" content="Pintree Bookmarks link">
-  <meta name="description" content="Managing and Exporting your Bookmarks into a Website">
+  <title>Pintree JSON Converter - Manage and Export Bookmarks</title>
+  <meta name="keywords"
+    content="Pintree, JSON Converter, Bookmarks, Bookmark Manager, Export Bookmarks, Bookmark Website">
+  <meta name="description"
+    content="Pintree JSON Converter helps you manage and export your browser bookmarks into a beautifully organized website.">
+  <meta name="author" content="Pintree Team">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="Pintree, Inc.">
+  <meta name="distribution" content="global">
 
   <script defer src="https://cloud.umami.is/script.js" data-website-id="60283522-e543-4dcb-bd47-e855f1e0a635"></script>
   <Script async src="https://tally.so/widgets/embed.js"></script>
@@ -14,16 +20,18 @@
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://www.pintree.io">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pintree">
-  <meta property="og:description" content="Managing and Exporting your Bookmarks into a Website">
+  <meta property="og:title" content="Pintree JSON Converter - Manage and Export Bookmarks">
+  <meta property="og:description"
+    content="Pintree JSON Converter helps you manage and export your browser bookmarks into a beautifully organized website.">
   <meta property="og:image" content="https://www.pintree.io/assets/og.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="Pintree.io">
+  <meta property="twitter:domain" content="pintree.io">
   <meta property="twitter:url" content="https://www.pintree.io">
-  <meta name="twitter:title" content="Pintree">
-  <meta name="twitter:description" content="Managing and Exporting your Bookmarks into a Website">
+  <meta name="twitter:title" content="Pintree JSON Converter - Manage and Export Bookmarks">
+  <meta name="twitter:description"
+    content="Pintree JSON Converter helps you manage and export your browser bookmarks into a beautifully organized website.">
   <meta name="twitter:image" content="https://www.pintree.io/assets/og.png">
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -33,8 +41,29 @@
 
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/json-converter.css">
-  <style>
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.pintree.io",
+    "name": "Pintree JSON Converter",
+    "description": "Pintree JSON Converter helps you manage and export your browser bookmarks into a beautifully organized website.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.pintree.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Pintree, Inc.",
+      "url": "https://www.pintree.io",
+      "logo": "https://www.pintree.io/assets/logo.png"
+    }
+  }
+  </script>
+</head>
 
 <body>
   <header class="">
@@ -56,19 +85,18 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-
         <a href="https://app.pintree.io/" target="_blank"
-          class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Online
+          class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 transition-transform transform hover:scale-105">Online
           Demo</a>
         <a href="https://github.com/Pintree-io/pintree" target="_blank"
-          class="-mx-3 flex rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 items-center gap-1"><svg
+          class="-mx-3 flex rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 items-center gap-1 transition-transform transform hover:scale-105"><svg
             class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fill-rule="evenodd"
               d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
               clip-rule="evenodd" />
           </svg>Github</a>
         <a href="/json-converter.html"
-          class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Json
+          class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 transition-transform transform hover:scale-105">Json
           Converter</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -119,8 +147,9 @@
                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                     clip-rule="evenodd" />
                 </svg>Github</a>
-                <a href="/json-converter.html"
-                    class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Json Converter</a>
+              <a href="/json-converter.html"
+                class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Json
+                Converter</a>
               <a href="https://pintree.canny.io/" target="_blank"
                 class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Roadmap</a>
             </div>
@@ -153,7 +182,8 @@
   </div>
 
   <!-- Converter -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-16 animate__animated"
+    data-animation="animate__fadeIn">
     <div class="mx-auto max-w-3xl">
       <div class="text-center p-8">
         <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-black sm:text-4xl">Bookmark Converter</h2>
@@ -265,7 +295,7 @@
 
   <footer class="bg-white">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
-      <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+      <nav class="-mb-6 columns-2 sm:flex sm:justify-center text-center sm:space-x-12" aria-label="Footer">
         <div class="pb-6">
           <a href="https://eu.umami.is/websites/60283522-e543-4dcb-bd47-e855f1e0a635"
             class="text-sm leading-6 text-gray-600 hover:text-gray-900" target="_blank">Umami</a>
@@ -300,11 +330,45 @@
           </svg>
         </a>
       </div>
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Pintree, Inc. All rights reserved.</p>
+      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; <span id="current-year"></span> Pintree, Inc.
+        All rights reserved.</p>
     </div>
   </footer>
 
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
+  <script>
+    // 函数：检查元素是否在视口中
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // 函数：处理滚动事件
+    function onScroll() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        if (isInViewport(element)) {
+          const animation = element.getAttribute('data-animation');
+          element.style.opacity = 1;
+          element.classList.add(animation);
+        }
+      });
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', onScroll);
+
+    // 初始调用
+    document.addEventListener('DOMContentLoaded', onScroll);
+  </script>
 
   <script>
     document.getElementById('menu-toggle').addEventListener('click', function () {
