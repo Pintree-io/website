@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full dark:bg-gray-900 bg-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Pintree</title>
+    <meta name="keywords"
+        content="Pintree, Bookmarks, link, bookmark manager, bookmark export, navigation site, browser bookmarks">
+    <meta name="description"
+        content="Pintree helps you manage and export your browser bookmarks into a beautiful navigation website easily.">
+
+    <link rel="canonical" href="https://www.pintree.io/guide.html">
+    <meta name="robots" content="index, follow">
+
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="60283522-e543-4dcb-bd47-e855f1e0a635"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1JF3QTQ79"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P1JF3QTQ79');
+    </script>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.pintree.io/guide.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Guide - Pintree">
+    <meta property="og:description"
+        content="A comprehensive guide on how to use Pintree JSON Converter to manage and export your bookmarks.">
+    <meta property="og:image" content="https://www.pintree.io/assets/og.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="pintree.io">
+    <meta property="twitter:url" content="https://www.pintree.io/guide.html">
+    <meta name="twitter:title" content="Guide - Pintree">
+    <meta name="twitter:description"
+        content="A comprehensive guide on how to use Pintree JSON Converter to manage and export your bookmarks.">
+    <meta name="twitter:image" content="https://www.pintree.io/assets/og.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/favicon/favicon-32x32.png" color="#0b0b0f">
+
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header class="">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="/" class="-m-1.5 p-1.5 flex">
+              <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+              <div class="ml-4 font-extrabold text-2xl dark:text-white">Pintree</div>
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button id="menu-toggle" type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="https://app.pintree.io/" target="_blank"
+              class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 transition-transform transform hover:scale-105">
+              Demo</a>
+            <a href="/guide.html"
+              class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 transition-transform transform hover:scale-105">Guide</a>
+              <a href="https://github.com/Pintree-io/pintree" target="_blank"
+              class="-mx-3 flex rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 items-center gap-1 transition-transform transform hover:scale-105"><svg
+                class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd" />
+              </svg>Github</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a class="group gap-2 inline-flex items-center justify-center rounded-full py-4 px-6 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-green-600 text-white hover:text-white hover:bg-green-700 active:bg-green-700 active:text-green-100 focus-visible:outline-green-600"
+              color="blue" variant="solid"
+              href="https://chromewebstore.google.com/detail/pintree-bookmarks-exporte/mjcglnkikjidokobpfdcdmcnfdicojce" target="_blank"><span>Chrome Extension</span>
+              <div class="relative right-0 group-hover:translate-x-1 w-5 duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="arrow-right">
+                  <path class="opacity-0 group-hover:opacity-100 duration-200" d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </nav>
+        <!-- Mobile menu, initially hidden -->
+        <div id="mobile-menu" class="hidden lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="/" class="-m-1.5 p-1.5 flex">
+                <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+                <div class="ml-4 font-extrabold text-2xl dark:text-white">Pintree</div>
+              </a>
+              <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+    
+                  <a href="https://app.pintree.io/" target="_blank"
+                    class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">
+                    Demo</a>
+                  
+                  <a href="/guide.html"
+                    class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Guide</a>
+                    <a href="https://github.com/Pintree-io/pintree" target="_blank"
+                    class="-mx-3 flex rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5 items-center gap-1"><svg
+                      class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clip-rule="evenodd" />
+                    </svg>Github</a>
+                  <a href="https://pintree.canny.io/" target="_blank"
+                    class="-mx-3 block rounded-full px-6 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-black/5">Roadmap</a>
+                </div>
+                <div class="py-6">
+                  <a class="group gap-2 inline-flex items-center justify-center rounded-full py-4 px-6 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-green-600 text-white hover:text-white hover:bg-green-700 active:bg-green-700 active:text-green-100 focus-visible:outline-green-600"
+                    color="blue" variant="solid"
+                    href="https://chromewebstore.google.com/detail/pintree-bookmarks-exporte/mjcglnkikjidokobpfdcdmcnfdicojce" target="_blank"><span>Chrome Extension</span>
+                    <div class="relative right-0 group-hover:translate-x-1 w-5 duration-200">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="arrow-right">
+                        <path class="opacity-0 group-hover:opacity-100 duration-200" d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="max-w-7xl mx-auto py-6 sm:py-16 px-6 sm:px-8 md:px-20 lg:px-8">
+        <div class="max-w-2xl">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white">Pintree User Guide</h1>
+                
+            </div>
+            <p class="mt-8 text-lg text-gray-700 dark:text-gray-300">
+                Pintree is an open-source project designed to export browser bookmarks into a navigation site. With just a few simple steps, you can convert your bookmarks into a beautiful and user-friendly navigation page.
+            </p>
+            <div class="relative inline-block text-left pt-6">
+                <a href="#" class="inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+                    English
+                </a>
+                <a href="/guide-zh.html" class="inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+                    简体中文
+                </a>
+            </div>
+        </div>
+        <section class="mt-2">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="step sm:pt-12 pt-6">
+                    <div class="relative overflow-hidden sm:rounded-2xl rounded-lg h-44 sm:h-72 md:h-72">
+                        <img src="assets/guide/step1.png" alt="Download your browser bookmarks"
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="sm:flex sm:items-center">
+                        <div class="flex-auto mt-6">
+                            <h3 class="text-lg font-semibold leading-8 text-gray-900">Download Your Browser Bookmarks</h3>
+                            <span class="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Step 1</span>
+                        </div>
+                        <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+                            <a href="https://chromewebstore.google.com/detail/pintree-bookmarks-exporte/mjcglnkikjidokobpfdcdmcnfdicojce"
+                               target="_blank"
+                               class="gap-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_552_9256)">
+                                        <path d="M8.00021 12.451C10.4586 12.451 12.4515 10.458 12.4515 7.99956C12.4515 5.54113 10.4586 3.54813 8.00021 3.54813C5.54177 3.54813 3.54877 5.54113 3.54877 7.99956C3.54877 10.458 5.5417 12.451 8.00014 12.451" fill="white"/>
+                                        <path d="M2.24315 5.81231C1.91106 5.23711 1.52073 4.63342 1.07215 4.00125C0.369879 5.21734 0.000145925 6.59688 0.000122071 8.00118C9.82178e-05 9.40548 0.369785 10.785 1.07201 12.0011C1.77424 13.2173 2.78426 14.2271 4.00052 14.929C5.21678 15.631 6.59641 16.0004 8.00071 16.0001C8.737 14.9674 9.23692 14.2228 9.50046 13.7663C10.0066 12.8896 10.6613 11.6343 11.4644 10.0006V9.99969C11.1135 10.608 10.6087 11.1132 10.0006 11.4645C9.39254 11.8159 8.70268 12.0009 8.00042 12.001C7.29817 12.0011 6.60826 11.8163 6.00008 11.4652C5.3919 11.114 4.88689 10.609 4.53584 10.0008C3.44509 7.9665 2.68086 6.57031 2.24315 5.81231Z" fill="#229342"/>
+                                        <path d="M8.00052 15.9998C9.05112 15.9999 10.0915 15.7931 11.0621 15.3912C12.0328 14.9892 12.9147 14.3999 13.6576 13.657C14.4004 12.9141 14.9897 12.0321 15.3916 11.0614C15.7935 10.0908 16.0003 9.05041 16 7.99981C15.9997 6.5955 15.6298 5.21601 14.9273 4C13.4118 3.85063 12.2934 3.77594 11.572 3.77594C10.754 3.77594 9.56329 3.85063 7.99996 4L7.99908 4.00063C8.70136 4.00028 9.39134 4.18486 9.99964 4.5358C10.6079 4.88675 11.1131 5.39168 11.4643 5.99981C11.8156 6.60795 12.0005 7.29785 12.0005 8.00014C12.0005 8.70242 11.8155 9.39232 11.4643 10.0004L8.00052 15.9998Z" fill="#FBC116"/>
+                                        <path d="M8.00019 11.1673C9.74919 11.1673 11.167 9.7495 11.167 8.00043C11.167 6.25137 9.74919 4.83356 8.00013 4.83356C6.25119 4.83356 4.83331 6.25143 4.83331 8.00043C4.83331 9.74943 6.25119 11.1673 8.00019 11.1673Z" fill="#1A73E8"/>
+                                        <path d="M8.00021 4.00024H14.9275C14.2256 2.78396 13.2157 1.77394 11.9996 1.07173C10.7835 0.369516 9.4039 -0.00012552 7.99959 -3.04993e-05C6.59528 6.45212e-05 5.21575 0.369893 3.99971 1.07227C2.78368 1.77464 1.774 2.7848 1.0722 4.00118L4.53589 10.0006L4.53683 10.0011C4.18543 9.39302 4.00031 8.70319 4.00011 8.00092C3.9999 7.29865 4.18461 6.6087 4.53565 6.00047C4.8867 5.39223 5.39171 4.88715 5.99989 4.53602C6.60808 4.18488 7.298 4.00007 8.00027 4.00018L8.00021 4.00024Z" fill="#E33B2E"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_552_9256">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Install Extension
+                            </a>
+                        </div>
+                    </div>
+    
+                    <ol class="mt-4 text-base leading-7 text-gray-600">
+                        <li>1. Install <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Pintree Bookmarks Exporter</code> extension</li>
+                        <li>2. Use the extension to export your browser bookmarks and save the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">JSON</code> file locally</li>
+                    </ol>
+                </div>
+    
+                <div class="step sm:pt-12 pt-6">
+                    <div class="relative overflow-hidden sm:rounded-2xl rounded-lg h-44 sm:h-72 md:h-72">
+                        <img src="assets/guide/step2.png" alt="Fork the project"
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="sm:flex sm:items-center">
+                        <div class="flex-auto mt-6">
+                            <h3 class="text-lg font-semibold leading-8 text-gray-900">Fork the Project</h3>
+                            <span class="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Step 2</span>
+                        </div>
+                        <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+                            <a href="https://github.com/Pintree-io/pintree" target="_blank"
+                               class="gap-2 flex items-center justify-center rounded-full bg-green-600 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99998 1.33334C7.1245 1.33334 6.25759 1.50578 5.44876 1.84081C4.63992 2.17584 3.90499 2.66691 3.28593 3.28597C2.03569 4.53621 1.33331 6.2319 1.33331 8.00001C1.33331 10.9467 3.24665 13.4467 5.89331 14.3333C6.22665 14.3867 6.33331 14.18 6.33331 14V12.8733C4.48665 13.2733 4.09331 11.98 4.09331 11.98C3.78665 11.2067 3.35331 11 3.35331 11C2.74665 10.5867 3.39998 10.6 3.39998 10.6C4.06665 10.6467 4.41998 11.2867 4.41998 11.2867C4.99998 12.3 5.97998 12 6.35998 11.84C6.41998 11.4067 6.59331 11.1133 6.77998 10.9467C5.29998 10.78 3.74665 10.2067 3.74665 7.66668C3.74665 6.92668 3.99998 6.33334 4.43331 5.86001C4.36665 5.69334 4.13331 5.00001 4.49998 4.10001C4.49998 4.10001 5.05998 3.92001 6.33331 4.78001C6.85998 4.63334 7.43331 4.56001 7.99998 4.56001C8.56665 4.56001 9.13998 4.63334 9.66665 4.78001C10.94 3.92001 11.5 4.10001 11.5 4.10001C11.8666 5.00001 11.6333 5.69334 11.5666 5.86001C12 6.33334 12.2533 6.92668 12.2533 7.66668C12.2533 10.2133 10.6933 10.7733 9.20665 10.94C9.44665 11.1467 9.66665 11.5533 9.66665 12.1733V14C9.66665 14.18 9.77331 14.3933 10.1133 14.3333C12.76 13.44 14.6666 10.9467 14.6666 8.00001C14.6666 7.12453 14.4942 6.25762 14.1592 5.44879C13.8241 4.63995 13.3331 3.90502 12.714 3.28597C12.095 2.66691 11.36 2.17584 10.5512 1.84081C9.74237 1.50578 8.87546 1.33334 7.99998 1.33334Z" fill="white"/>
+                                </svg>
+                                Github
+                            </a>
+                        </div>
+                    </div>
+                    <ol class="mt-4 text-base leading-7 text-gray-600">
+                        <li>1. Visit the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Pintree GitHub repository</code></li>
+                        <li>2. Click the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Fork</code> button in the upper right corner to fork the project to your GitHub account</li>
+                    </ol>
+                </div>
+    
+                <div class="step sm:pt-12 pt-6">
+                    <div class="relative overflow-hidden sm:rounded-2xl rounded-lg h-44 sm:h-72 md:h-72">
+                        <img src="assets/guide/step3.png" alt="Replace JSON file"
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="sm:flex sm:items-center">
+                        <div class="flex-auto mt-6">
+                            <h3 class="text-lg font-semibold leading-8 text-gray-900">Replace JSON File</h3>
+                            <span class="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Step 3</span>
+                        </div>
+                    </div>
+                    <ol class="mt-4 text-base leading-7 text-gray-600">
+                        <li>1. Open the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">pintree</code> repository in your GitHub account (the project you just forked).</li>
+                        <li>2. Click on the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">json</code> folder in the repository.</li>
+                        <li>3. Click the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Upload files</code> button, select the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">JSON</code> file you downloaded earlier, and upload it.</li>
+                        <li>4. Make sure the uploaded file is named <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">pintree.json</code>, and select <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Commit changes</code>.</li>
+                    </ol>
+                </div>
+    
+                <div class="step sm:pt-12 pt-6">
+                    <div class="relative overflow-hidden sm:rounded-2xl rounded-lg h-44 sm:h-72 md:h-72">
+                        <img src="assets/guide/step4.png" alt="Complete"
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="sm:flex sm:items-center">
+                        <div class="flex-auto mt-6">
+                            <h3 class="text-lg font-semibold leading-8 text-gray-900">Complete✨🎉🎉✨</h3>
+                            <span class="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Step 4</span>
+                        </div>
+                    </div>
+                    <ol class="mt-4 text-base leading-7 text-gray-600">
+                        <li>1. In your <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">pintree</code> repository page, click <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Settings</code>.</li>
+                        <li>2. Find the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Pages</code> option.</li>
+                        <li>3. In the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Source</code> dropdown menu, select the <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">gh-pages</code> branch, and click <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">Save</code>.</li>
+                        <li>4. After a few minutes, your static website will be available at <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">https://yourusername.github.io/pintree</code>. Remember to replace <code class="bg-gray-100 rounded px-1 py-0.5 font-mono text-sm">yourusername</code> with your GitHub username.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-white" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8">
+                    <a href="/" class="-m-1.5 p-1.5 flex">
+                        <img class="h-8 w-auto" src="assets/logo.svg" alt="">
+                        <div class="ml-4 font-extrabold text-2xl dark:text-white">Pintree</div>
+                    </a>
+                    <p class="text-sm leading-6 text-gray-600">With a few simple steps, you can export your local
+                        bookmarks into a shareable website.</p>
+                    <div class="flex space-x-6">
+                        <a href="https://x.com/decohack" class="text-gray-400 hover:text-gray-500" target="_blank">
+                            <span class="sr-only">X</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Pintree-io/pintree" class="text-gray-400 hover:text-gray-500"
+                            target="_blank">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-gray-900">Features</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="https://app.pintree.io/" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Demo</a>
+                                </li>
+                                <li>
+                                    <a href="https://chromewebstore.google.com/detail/pintree-bookmarks-exporte/mjcglnkikjidokobpfdcdmcnfdicojce"
+                                        target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Bookmarks
+                                        Exporter</a>
+                                </li>
+                                <li>
+                                    <a href="/json-converter.html"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">JSON Converter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-sm font-semibold leading-6 text-gray-900">Development</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="https://github.com/Pintree-io/pintree" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">GitHub</a>
+                                </li>
+                                <li>
+                                    <a href="/guide.html"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Pintree-io/pintree" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="https://pintree.canny.io/" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/decohack" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-sm font-semibold leading-6 text-gray-900">Updates</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="https://cloud.umami.is/share/4W6f4TYjeRWUIexf/pintree.io" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Umami</a>
+                                </li>
+                                <li>
+                                    <a href="https://pintree.canny.io/" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Roadmap</a>
+                                </li>
+                                <li>
+                                    <a href="https://pintree.canny.io/" target="_blank"
+                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900">Changelog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+                <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; <span id="current-year"></span>
+                    Pintree, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('menu-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+
+    <script src="js/json-converter.js"></script>
+</body>
+
+</html>
